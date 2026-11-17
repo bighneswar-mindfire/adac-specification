@@ -203,6 +203,13 @@ infrastructure:
               justify: center
               order: 2
 
+        - id: "api"
+          service: "lambda"
+          name: "API"
+          configuration: { subnets: ["private-subnet"] }
+          visual:
+            layout: { order: 1 }
+
         - id: "aurora"
           service: "rds-aurora-postgres"
           name: "Aurora"
@@ -260,7 +267,7 @@ Only the `elk` engine applies the full set of declarative properties. The other 
 | `visual.layout`: `size`, `minSize`, `maxSize` on leaf elements                                                                       |  yes  |               yes               |
 | `layoutOptions`: `unitSize`, `background`, `edgeLabels`, `labelMaxChars`                                                             |  yes  |               yes               |
 
-A **container** here is a service that holds others: another service names it as its `vpc`, `vnet`, `subnet` or `subnets` (in `config` or on the service), or it `runs` applications. Only for these are `size`, `minSize` and `maxSize` counted as ignored; on any other element every engine applies them.
+A **container** here is a service that holds others: another service names it as its `vpc`, `vnet`, `subnet` or `subnets` (in `configuration` or on the service), or it `runs` applications. Only for these are `size`, `minSize` and `maxSize` counted as ignored; on any other element every engine applies them.
 
 ### Unsupported-engine warning
 
