@@ -45,7 +45,7 @@ An ADAC file **MUST** be a valid YAML 1.2 or JSON document. The root level **MUS
 | `connections` | `array` | **OPTIONAL** | Definitions of traffic flow and dependencies. |
 | `cost` | `object` | **OPTIONAL** | Cost tracking summary. |
 | `governance` | `object` | **OPTIONAL** | Compliance, SLA, and security guardrails. |
-| `layoutOptions` | `object` | **OPTIONAL** | Global diagram layout and styling defaults. See [Declarative Layout & Styling](../core-concepts/declarative-layout). |
+| `layoutOptions` | `object` | **OPTIONAL** | Global diagram layout and styling options, including the `defaults` profile (`v1` or `none`). See [Declarative Layout & Styling](../core-concepts/declarative-layout). |
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
